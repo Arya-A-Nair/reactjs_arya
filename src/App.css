@@ -44,10 +44,43 @@
   padding-top: 20%;
   padding-bottom: 0px;
 }
-
-
 .error{
   text-align: left;
 }
+
+.Card{
+  width:50%;
+  /* box-shadow:2px  2px 2px 2px black;*/
+  box-shadow: rgba(100, 100, 111, 0.2) 5px 7px 29px 5px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 25%;
+  background-color: #ECECEC;
+
+  font-weight: 600;
+}
+
+.Card:hover{
+  border: 3px solid #67A6D5;
+
+}
+
+.Card-Top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom:10px
+}
+.Card-Bottom{
+  text-align: left;
+}
+.Card-Bottom div{
+  margin: 2px;
+}
+
+
 
 

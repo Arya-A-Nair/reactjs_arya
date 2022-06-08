@@ -9,8 +9,8 @@ const UserCard = ({data}) => {
             <span>{data.contact}</span>
         </div>
         <div className='Card-Bottom'>
-            <span>{data.email}</span>
-            <span>{data.address}</span>
+            <div>{data.email}</div>
+            <div>{data.address}</div>
         </div>
 
     </div>
