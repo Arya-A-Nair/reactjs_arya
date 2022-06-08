@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Add from './components/Add';
+import Show from './components/Show';
+import {createContext, useState} from 'react';
+
+export const Option=createContext();
+
 
 function App() {
+  const [option, setOption] = useState("Add");
+
   return (
+  <Option.Provider value={[option,setOption]}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {option==="Add"?<Add/>:<Show/>}
     </div>
+  </Option.Provider>
   );
 }
 
