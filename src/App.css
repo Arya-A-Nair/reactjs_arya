@@ -4,8 +4,12 @@
 
 .header{
   display: flex;
-
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
 }
+
 .options{
   width: auto;
   height: auto;
@@ -26,6 +30,24 @@
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;  
+
+}
+
+.Add-data{
+  display: grid ;
+  grid-template-columns: 0.5fr 2fr 1fr;
+  width: 60%;
+  margin-left: 25%;
+
+}
+.Add-data div{
+  padding-top: 20%;
+  padding-bottom: 0px;
+}
+
+
+.error{
+  text-align: left;
 }
 
 

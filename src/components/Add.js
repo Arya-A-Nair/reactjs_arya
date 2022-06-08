@@ -37,26 +37,28 @@ const Add = () => {
     }
 
   return (
-    <form>
-        <div>
-            <label>Name</label>
-            <input type="input" className="input"  name="name" id='name' value={name} onChange={(e)=>nameChange(e.target.value)}  required />
-        </div>
-        <div>
-            <label>Email</label>
+    <form className="Add-data">
+    
+            <div>Name</div>
+            <input type="input" className="input"  name="name" id='name' value={name} onChange={(e)=>nameChange(e.target.value)}  required /><span></span>
+        
+    
+            <div>Email</div>
+            
             <input type="email" className="input"  name="email" id='email' value={email} onChange={(e)=>emailChange(e.target.value)} required />
             <span className="error">{emailerror}</span>
-        </div>
-        <div>
-            <label>Contact</label>
+        
+    
+            <div>Contact</div>
             <input type="number" className="input"  name="contact" id='contact' value={contact} onChange={(e)=>contactChange(e.target.value)} required />
             <span className="error">{contactError}</span>
 
-        </div>
-        <div>
-            <label>Address</label>
-            <input type="text" className="input"  name="address" id='address' value={address} onChange={(e)=>addressChange(e.target.value)} required />
-        </div>
+        
+    
+            <div>Address</div>
+            <input type="text" className="input"  name="address" id='address' value={address} onChange={(e)=>addressChange(e.target.value)} required /><span></span>
+        
+        
 
     </form>
     )

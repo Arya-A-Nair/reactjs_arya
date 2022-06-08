@@ -1,8 +1,14 @@
 import React from 'react'
+import data from '../data'
+import UserCard from './UserCard'
 
 const Show = () => {
   return (
-    <div>Show</div>
+    <div>
+    {data.map((user,index)=>{
+        return <UserCard key={index} data={user}/>
+    })}
+    </div>
   )
 }
 
