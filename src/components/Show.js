@@ -21,7 +21,6 @@ const Show = () => {
   return (
     <div>
       {data.map((user,index)=>{
-        console.log(user)
           return <UserCard key={index} data={user}/>
       })}
     </div>
