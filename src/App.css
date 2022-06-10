@@ -41,11 +41,13 @@
 
 }
 .Add-data div{
-  padding-top: 20%;
+  padding-top: 30px;
   padding-bottom: 0px;
 }
 .error{
+  padding-left: 10px;
   text-align: left;
+  color: red;
 }
 
 .Card{
@@ -116,4 +118,9 @@
 
 .submit:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+.loading{
+  width:20px;
+  display: none;
 }

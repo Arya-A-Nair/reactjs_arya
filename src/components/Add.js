@@ -47,7 +47,8 @@ const Add = () => {
 
     let handleSubmit=async (e)=>{
         e.preventDefault()
-        
+        let loading=document.getElementById('loading')
+        loading.style.display="block"
         let data={
             name,
             email,
@@ -78,12 +79,12 @@ const Add = () => {
             <div>Email</div>
             
             <input type="email" className="input"  name="email" id='email' value={email} onChange={(e)=>emailChange(e.target.value)} required />
-            <div>{emailerror}</div>
+            <div className='error'>{emailerror}</div>
         
         
             <div>Contact</div>
             <input type="number" className="input"  name="contact" id='contact' value={contact} onChange={(e)=>contactChange(e.target.value)} required />
-            <div>{contactError}</div>
+            <div className='error'>{contactError}</div>
 
         
     
@@ -92,9 +93,16 @@ const Add = () => {
 
             <div></div>
             <div>
-                <button type="submit" className="submit">Submit</button>
+                <button type="submit" className="submit">
+                    Submit
+                    <img src="https://i.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.webp" alt="loading" className="loading" id="loading"/>
+
+                </button>
             </div>
-            <div></div>
+            <div>
+            
+
+            </div>
     </form>
     )
 }
