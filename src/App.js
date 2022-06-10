@@ -3,8 +3,10 @@ import Header from './components/Header';
 import Add from './components/Add';
 import Show from './components/Show';
 import {createContext, useState} from 'react';
+import data from './data';
 
 export const Option=createContext();
+export const userdata=createContext();
 
 
 function App() {
@@ -12,10 +14,12 @@ function App() {
 
   return (
   <Option.Provider value={[option,setOption]}>
-    <div className="App">
-      <Header />
-      {option==="Add"?<Add/>:<Show/>}
-    </div>
+    <userdata.Provider value={data}>
+      <div className="App">
+        <Header />
+        {option==="Add"?<Add/>:<Show/>}
+      </div>
+    </userdata.Provider>
   </Option.Provider>
   );
 }
