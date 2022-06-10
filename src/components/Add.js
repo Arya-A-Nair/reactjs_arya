@@ -55,8 +55,7 @@ const Add = () => {
             address
         }
         data1.push(data)
-        console.log(data1)
-        setoption("Show")
+        
 
         let response=await fetch('https://dry-bayou-99944.herokuapp.com/profiles',{
             method:'POST',
@@ -67,8 +66,7 @@ const Add = () => {
             body:JSON.stringify(data)
         })
         let res=await response.json()
-        console.log(res)
-        
+        setoption("Show")
         
     }
 
